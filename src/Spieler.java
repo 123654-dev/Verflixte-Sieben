@@ -1,19 +1,19 @@
 
 /**
- * Beschreiben Sie hier die Klasse GUI.
+ * Beschreiben Sie hier die Klasse Spieler.
  * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class GUI
+public class Spieler
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private int x;
 
     /**
-     * Konstruktor fÃ¼r Objekte der Klasse GUI
+     * Konstruktor für Objekte der Klasse Spieler
      */
-    public GUI()
+    public Spieler()
     {
         // Instanzvariable initialisieren
         x = 0;
@@ -22,7 +22,7 @@ public class GUI
     /**
      * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
      * 
-     * @param  y    ein Beispielparameter fÃ¼r eine Methode
+     * @param  y    ein Beispielparameter für eine Methode
      * @return        die Summe aus x und y
      */
     public int beispielMethode(int y)
