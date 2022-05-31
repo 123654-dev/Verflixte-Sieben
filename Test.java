@@ -11,7 +11,7 @@ public class Test
     private int x;
 
     /**
-     * Konstruktor für Objekte der Klasse Test
+     * Flemming luulllululululu
      */
     public Test()
     {
