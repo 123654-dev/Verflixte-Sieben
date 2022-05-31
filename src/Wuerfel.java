@@ -1,29 +1,28 @@
 
 /**
- * Beschreiben Sie hier die Klasse Test.
+ * Beschreiben Sie hier die Klasse Wuerfel.
  * 
- * @author (Ihr Name) Test paul war hier
+ * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Test
+public class Wuerfel
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private int x;
-    private int y;
-    private int z;
+
     /**
-     * Flemming luulllululululu
+     * Konstruktor für Objekte der Klasse Wuerfel
      */
-    public Test()
+    public Wuerfel()
     {
         // Instanzvariable initialisieren
-        x = 1;
+        x = 0;
     }
 
     /**
      * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
      * 
-     * @param  y    ein Beispielparameter fÃ¼r eine Methode
+     * @param  y    ein Beispielparameter für eine Methode
      * @return        die Summe aus x und y
      */
     public int beispielMethode(int y)
