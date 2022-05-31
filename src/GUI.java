@@ -1,3 +1,7 @@
+package src;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
 
 /**
  * Beschreiben Sie hier die Klasse GUI.
@@ -5,29 +9,46 @@
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class GUI
+public class GUI //implements ActionListener
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    private JFrame frame= new JFrame("Verflixte Sieben");
+    private JPanel panel= new JPanel(new GridBagLayout());
+    private JPanel panelBild= new JPanel();
+    private GridBagConstraints c = new GridBagConstraints();
+    
+    private JTextField einsatz1= new JTextField(8);
+    private JTextField einsatz2= new JTextField(8);
+    private JTextField namenEingabe1= new JTextField(8);
+    private JTextField namenEingabe2= new JTextField(8); 
+    
+    private JButton start= new JButton("WÃ¼rfeln");
+    
+    
+    
 
+    
+    
+    
+    
     /**
-     * Konstruktor für Objekte der Klasse GUI
+     * Konstruktor fÃ¼r Objekte der Klasse GUI
      */
     public GUI()
     {
-        // Instanzvariable initialisieren
-        x = 0;
+        frame.setVisible(true);
+        frame.setTitle("Rechner");
+        frame.setSize(1000,800);
+        
+        frame.add(panel);
+        
+        panel.add(einsatz1,c);
+        panel.add(einsatz2,c);
+        panel.add( namenEingabe1,c);
+        panel.add(namenEingabe2,c);
+        frame .setBackground(Color.white);
+        
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
-    }
+    
 }
