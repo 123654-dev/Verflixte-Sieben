@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Spieler
+comment0.text=\r\n\ Der\ Spieler\ des\ Spiels\ "Verflixte\ Sieben"\r\n\ \r\n\ @author\ Paul\ P\r\n\ @version\ 03.06.2022\r\n
+comment1.params=pStartguthaben
+comment1.target=Spieler(int)
+comment1.text=\r\n\ Konstruktor\ fuer\ Objekte\ der\ Klasse\ Spieler\r\n
+comment2.params=
+comment2.target=void\ spielzugAusfuehren()
+comment2.text=\r\n\ Wird\ vom\ Spielmanager\ aufgerufen,\ wenn\ der\ Spieler\ an\ der\ Reihe\ ist.\r\n
+comment3.params=
+comment3.target=void\ topfLeeren()
+comment3.text=\r\n\ Wird\ aufgerufen,\ wenn\ ein\ Spieler\ verloren\ hat\ und\ der\ Topf\ geleert\ werden\ muss.\r\n
+numComments=4
