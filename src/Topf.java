@@ -13,7 +13,7 @@ public class Topf
     private int x;
 
     /**
-     * Konstruktor für Objekte der Klasse Topf
+     * Konstruktor fÃ¼r Objekte der Klasse Topf
      */
     public Topf()
     {
@@ -24,7 +24,7 @@ public class Topf
     /**
      * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
      * 
-     * @param  y    ein Beispielparameter für eine Methode
+     * @param  y    ein Beispielparameter fÃ¼r eine Methode
      * @return        die Summe aus x und y
      */
     public int beispielMethode(int y)
