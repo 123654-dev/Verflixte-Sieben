@@ -1,5 +1,3 @@
-package src;
-
 /**
  * Beschreiben Sie hier die Klasse topf.
  * 
