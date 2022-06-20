@@ -128,6 +128,10 @@ public class GUI implements ActionListener
         
         name2.setFont(fontABC);
         name2.setForeground (Color.white);
+        punkteAnzahl1.setFont(fontABC);
+        punkteAnzahl1.setForeground (Color.white);
+        punkteAnzahl2.setFont(fontABC);
+        punkteAnzahl2.setForeground (Color.white);
         
         punkteAnzahl1.setFont(fontABC);
         punkteAnzahl1.setForeground (Color.white);
@@ -143,6 +147,9 @@ public class GUI implements ActionListener
         fertig.setFont(fontABC);
         fertig.setForeground (Color.white);
         fertig.setBackground(new Color(105,105,105));
+        stop.setFont(fontABC);
+        stop.setForeground (Color.white);
+        stop.setBackground(new Color(105,105,105));
         
         frame.setBackground(Color.white);
       /*try {
