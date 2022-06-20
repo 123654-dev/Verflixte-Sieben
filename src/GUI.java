@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-package src;
-
-=======
->>>>>>> f956aafaef42e119d8bd96b4f48231d0a0a1191f
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane.CloseAction;
