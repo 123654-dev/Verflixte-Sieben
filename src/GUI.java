@@ -180,14 +180,22 @@ public class GUI implements ActionListener
         name2.setText((""+zweitePerson));
         
         if (a.getSource()==this.start){
-            
+            if(value1<=0||value2<=0){
+            einsatz1.setText(("ERROR"));
+            einsatz2.setText(("ERROR"));
+            }
+            else{
+                //Spielmanager.wuerfel();
+            }
             
         }
         else if (a.getSource()==this.fertig){
             name1.setText((""+erstePerson));
             name2.setText((""+zweitePerson));
+            
             einsatz1.setText((""+value1));
             einsatz2.setText((""+value2));
+            
             
         }
         else if (a.getSource()==this.stop){
