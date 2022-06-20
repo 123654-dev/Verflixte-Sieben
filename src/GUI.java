@@ -1,10 +1,7 @@
-package src;
-
-
-
-
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.CloseAction;
+
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
@@ -63,7 +60,8 @@ public class GUI implements ActionListener
         frame.add(panel3,BorderLayout.LINE_END);
 
         frame.add(panel1);
-        
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
         c.gridx=0;
         c.gridy=0;
         panel1.add(namenEingabe1, c);
@@ -104,7 +102,7 @@ public class GUI implements ActionListener
     }
     public void bilder(){
         try {
-            BufferedImage myPicture=ImageIO.read(new File("würfeleins.png"));
+            BufferedImage myPicture=ImageIO.read(new File("wÃ¼rfeleins.png"));
             JLabel picLabel=new JLabel(new ImageIcon(myPicture));
             picturePanel.add(picLabel);
         }

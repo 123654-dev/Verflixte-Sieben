@@ -1,35 +1,39 @@
-package src;
-
-
 /**
- * Beschreiben Sie hier die Klasse Topf.
+ * Beschreiben Sie hier die Klasse topf.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author YS
+ * @version 03.06.22
  */
-public class Topf
-{
+public class Topf {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    private int einsatz;
 
     /**
-     * Konstruktor für Objekte der Klasse Topf
+     * Konstruktor für Objekte der Klasse topf
      */
-    public Topf()
-    {
+    public Topf() {
         // Instanzvariable initialisieren
-        x = 0;
+        einsatz = 0;
     }
 
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * Die Methode ermöglicht dem Spieler eine Zahl als Einsatz anzugeben. Ist schon
+     * eine andere Zahl vorhanden, wird sie mit dieser addiert.
      */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
+    public void einsatzAufnehmen(int pEinsatz) {
+        einsatz += pEinsatz;
+
+    }
+
+    /**
+     * Die Methode zeigt den eingegebenen Ansatz an.
+     */
+    public int einsatzAbgeben() {
+
+        return einsatz;
+    }
+
+    public void einsatzLeeren() {
+        einsatz = 0;
     }
 }

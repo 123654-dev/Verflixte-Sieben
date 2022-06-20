@@ -1,11 +1,15 @@
- 
 class Spielmanager {
         
-    public static void main(String[] args) {
-        Spieleinstellungen einstellungen = Spieleinstellungen.standardWerte();
+    static Spieler[] spieler;
+    static GUI gui;
+    static int aktuellerSpieler;
 
+    public static void main(String[] args) {
+        Spieleinstellungen einstellungen;        
+        einstellungen = Spieleinstellungen.standardWerte();
+        
         //Spieler-Array initialisieren
-        spieler = new Spieler[einstellungen.getMaxSpieleranzahl()];
+        spieler = new Spieler[2];
 
         //Alle Spieler, die "benötigt" werden, als Objekte erzeugen und das Array damit füllen
         for (int i = 0; i < spieler.length; i++) {
@@ -14,12 +18,23 @@ class Spielmanager {
 
         //Neue GUI-Instanz erzeugen, die später verwendet wird
         gui = new GUI();
-
         initGame();
     }
 
     static void initGame() {
+        //erster Spieler ist dran
+    }
+
+    public static void einsatzCallback() {
+        //jetzt: Würfeln
+    }
+
+    public static void wuerfelCallback() {
         
+    }
+
+    public static void rundeAbschliessen() {
+        //nächster Spieler
     }
 
 }
