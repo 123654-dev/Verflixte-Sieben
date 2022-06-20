@@ -31,6 +31,12 @@ class Spielmanager {
 
         //Neue GUI-Instanz erzeugen, die später verwendet wird
         gui = new GUI();
+
+        initGame();
+    }
+
+    static void initGame() {
         
     }
+
 }
