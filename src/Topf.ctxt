@@ -1,10 +1,13 @@
 #BlueJ class context
-comment0.target=Topf
-comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Topf.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.target=topf
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ topf.\r\n\ \r\n\ @author\ YS\r\n\ @version\ 03.06.22\r\n
 comment1.params=
-comment1.target=Topf()
-comment1.text=\r\n\ Konstruktor\ f\u00C3\u00BCr\ Objekte\ der\ Klasse\ Topf\r\n
-comment2.params=y
-comment2.target=int\ beispielMethode(int)
-comment2.text=\r\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\r\n\ \r\n\ @param\ \ y\ \ \ \ ein\ Beispielparameter\ f\u00C3\u00BCr\ eine\ Methode\r\n\ @return\ \ \ \ \ \ \ \ die\ Summe\ aus\ x\ und\ y\r\n
-numComments=3
+comment1.target=topf()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ topf\r\n
+comment2.params=pEinsatz
+comment2.target=void\ einsatzAufnehmen(int)
+comment2.text=\ \r\n\ Die\ Methode\ erm\u00F6glicht\ dem\ Spieler\ eine\ Zahl\ als\ Einsatz\ anzugeben.\ Ist\ schon\ eine\ andere\ Zahl\ vorhanden,\ wird\ sie\ mit\ dieser\ addiert.\r\n
+comment3.params=
+comment3.target=int\ einsatzAbgeben()
+comment3.text=\ \r\n\ Die\ Methode\ zeigt\ den\ eingegebenen\ Ansatz\ an.\ \r\n
+numComments=4

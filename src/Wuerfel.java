@@ -1,35 +1,38 @@
 package src;
 
 
+import java.util.Random;
 /**
  * Beschreiben Sie hier die Klasse Wuerfel.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author Flemming Salchow
+ * @version 31.05.2022
  */
 public class Wuerfel
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
-
-    /**
-     * Konstruktor für Objekte der Klasse Wuerfel
-     */
+    private int points;
+    private Random randomZahl;
     public Wuerfel()
     {
-        // Instanzvariable initialisieren
-        x = 0;
+        randomZahl = new Random();
     }
-
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
+    public void testen()
     {
-        // tragen Sie hier den Code ein
-        return x + y;
+        randomZahlAusgeben();
+        System.out.println(points);
+    }
+    public int pointsZahlAngeben()
+    {
+        return points;
+    }
+    public int randomZahlAusgeben()
+    {
+        int pMaximum = 5;
+        points = 1+ randomZahl.nextInt(pMaximum);
+        return points;
+    }
+    public void rollen()
+    {
+        randomZahlAusgeben();
     }
 }

@@ -1,8 +1,5 @@
 package src;
 
-
-
-
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -127,7 +124,7 @@ public class GUI implements ActionListener
         name2.setText((""+zweitePerson));
         
         if (a.getSource()==this.start){
-            
+            Spielmanager.getWert
             wurf.setText((""+einsatzDesErstenSpielers));
         }
         else if (a.getSource()==this.fertig){
