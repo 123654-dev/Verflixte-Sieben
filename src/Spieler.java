@@ -1,3 +1,5 @@
+package src;
+
  
 
 
@@ -9,19 +11,27 @@
  */
 public class Spieler
 {
+    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+    private int x;
 
     /**
      * Konstruktor für Objekte der Klasse Spieler
      */
-    public Spieler(int pStartguthaben)
+    public Spieler()
     {
-
+        // Instanzvariable initialisieren
+        x = 0;
     }
 
     /**
-     * Wird vom Spielmanager aufgerufen, wenn der Spieler an der Reihe ist.
+     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * 
+     * @param  y    ein Beispielparameter für eine Methode
+     * @return        die Summe aus x und y
      */
-    public void spielzugAusfuehren() {
-
+    public int beispielMethode(int y)
+    {
+        // tragen Sie hier den Code ein
+        return x + y;
     }
 }

@@ -1,3 +1,5 @@
+package src;
+
 
 /**
  * Beschreiben Sie hier die Klasse Topf.
@@ -11,7 +13,7 @@ public class Topf
     private int x;
 
     /**
-     * Konstruktor f�r Objekte der Klasse Topf
+     * Konstruktor für Objekte der Klasse Topf
      */
     public Topf()
     {
@@ -22,7 +24,7 @@ public class Topf
     /**
      * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
      * 
-     * @param  y    ein Beispielparameter f�r eine Methode
+     * @param  y    ein Beispielparameter für eine Methode
      * @return        die Summe aus x und y
      */
     public int beispielMethode(int y)
