@@ -1,3 +1,5 @@
+package src;
+
 class Spielmanager {
         
     static Spieler[] spieler;

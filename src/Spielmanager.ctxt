@@ -2,4 +2,12 @@
 comment0.target=Spielmanager
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-numComments=2
+comment2.params=
+comment2.target=void\ initGame()
+comment3.params=
+comment3.target=void\ einsatzCallback()
+comment4.params=
+comment4.target=void\ wuerfelCallback()
+comment5.params=
+comment5.target=void\ rundeAbschliessen()
+numComments=6

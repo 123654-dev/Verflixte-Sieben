@@ -1,12 +1,12 @@
 #BlueJ class context
-comment0.target=topf
+comment0.target=Topf
 comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ topf.\r\n\ \r\n\ @author\ YS\r\n\ @version\ 03.06.22\r\n
 comment1.params=
-comment1.target=topf()
-comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ topf\r\n
+comment1.target=Topf()
+comment1.text=\r\n\ Konstruktor\ f\u00EF\u00BF\u00BDr\ Objekte\ der\ Klasse\ topf\r\n
 comment2.params=pEinsatz
 comment2.target=void\ einsatzAufnehmen(int)
-comment2.text=\ \r\n\ Die\ Methode\ erm\u00F6glicht\ dem\ Spieler\ eine\ Zahl\ als\ Einsatz\ anzugeben.\ Ist\ schon\ eine\ andere\ Zahl\ vorhanden,\ wird\ sie\ mit\ dieser\ addiert.\r\n
+comment2.text=\ \r\n\ Die\ Methode\ erm\u00EF\u00BF\u00BDglicht\ dem\ Spieler\ eine\ Zahl\ als\ Einsatz\ anzugeben.\ Ist\ schon\ eine\ andere\ Zahl\ vorhanden,\ wird\ sie\ mit\ dieser\ addiert.\r\n
 comment3.params=
 comment3.target=int\ einsatzAbgeben()
 comment3.text=\ \r\n\ Die\ Methode\ zeigt\ den\ eingegebenen\ Ansatz\ an.\ \r\n
