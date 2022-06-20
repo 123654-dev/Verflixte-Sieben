@@ -19,7 +19,7 @@ import java.io.File;
  */
 public class GUI implements ActionListener
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+    // Hier werden die einzelnen Bausteine erstellt
     private JFrame frame = new JFrame("Verflixte Sieben");
     private JPanel panel1 = new JPanel(new GridBagLayout());
     private JPanel panel2 = new JPanel();
@@ -42,6 +42,7 @@ public class GUI implements ActionListener
     private JLabel name2=new JLabel("NAME");
     private JLabel punkte1=new JLabel("Punktzahl");
     private JLabel punkte2=new JLabel("Punktzahl");
+    private JLabel turning= new JLabel("kein Spieler ist dran");
     
 
     private JButton start = new JButton("Wuerfeln");
@@ -51,7 +52,7 @@ public class GUI implements ActionListener
     
     private Spielmanager manager;
     private Wuerfel wuerfel;
-    
+    // Das Picture Panel funktioniert momentan noch nicht
     private JPanel picturePanel;
     
     private int einsatzDesErstenSpielers = 0;
@@ -61,6 +62,7 @@ public class GUI implements ActionListener
      * Konstruktor fÃ¼r Objekte der Klasse GUI
      */
     public GUI() {
+        //Das Frame wird konfiguriert und das Layout bestimmt
         frame.setVisible(true);
         frame.setTitle("VerflixteSieben");
         frame.setSize(400, 200);
@@ -71,7 +73,7 @@ public class GUI implements ActionListener
 
         frame.add(panel1);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-            
+         // Die einzelnen Bausteine werden innerhalb der Panels mithilfe des Gridbaglayouts angeordnet   
         c.gridx= 0;
         c.gridy=0;
         panel1.add(name1,c);
@@ -90,6 +92,7 @@ public class GUI implements ActionListener
         c.gridx= 0;
         c.gridy=2;
         panel1.add(punkte1,c);
+        // Hintergrund wird bearbeitet
         panel1.setBackground(new Color(105,105,105));
         
         panel2.add(start);
@@ -117,11 +120,12 @@ public class GUI implements ActionListener
         c.gridx= 0;
         c.gridy=2;
         panel3.add(punkte2,c);
+        // Hintergrund wird bearbeitet
         panel3.setBackground(new Color(105,105,105));
-        
+        // Hintergrund wird bearbeitet
         panel4.setBackground(new Color(105,105,105));
-        
-        
+        panel4.add(turning,c);
+        // Font wird  verändert/ Schriftgröße und Farbe
         Font fontABC = new Font("Linux Libertine G", Font.PLAIN, 15);
         name1.setFont(fontABC);
         name1.setForeground (Color.white);
@@ -165,6 +169,7 @@ public class GUI implements ActionListener
     }
     
     public void actionPerformed(ActionEvent a){
+        //Auslesen der Eingegebenen INFORMATIONEN
         String erstePerson= namenEingabe1.getText();
         String zweitePerson= namenEingabe2.getText();
                 try {
@@ -178,7 +183,7 @@ public class GUI implements ActionListener
         
         name1.setText((""+erstePerson));
         name2.setText((""+zweitePerson));
-        
+        // Button werden programmiert
         if (a.getSource()==this.start){
             if(value1<=0||value2<=0){
             einsatz1.setText(("ERROR"));
@@ -186,6 +191,7 @@ public class GUI implements ActionListener
             }
             else{
                 //Spielmanager.wuerfel();
+                
             }
             
         }
@@ -198,6 +204,7 @@ public class GUI implements ActionListener
             
             
         }
+        
         else if (a.getSource()==this.stop){
             Spielmanager.rundeAbschliessen();
         }
