@@ -1,7 +1,6 @@
-package src;
+import java.util.HashMap;
 
 class Spielmanager {
-        
     static Spieler[] spieler;
     static GUI gui;
     static int aktuellerSpieler;
@@ -15,7 +14,7 @@ class Spielmanager {
 
         //Alle Spieler, die "benötigt" werden, als Objekte erzeugen und das Array damit füllen
         for (int i = 0; i < spieler.length; i++) {
-            spieler[i] = new Spieler(einstellungen.getStartguthaben());
+            spieler[i] = new Spieler(new Wuerfel(), new Wuerfel(), new Topf(), einstellungen.getStartguthaben());
         }
 
         //Neue GUI-Instanz erzeugen, die später verwendet wird
@@ -25,6 +24,7 @@ class Spielmanager {
 
     static void initGame() {
         //erster Spieler ist dran
+        aktuellerSpieler = 0;
     }
 
     public static void einsatzCallback() {
@@ -32,11 +32,22 @@ class Spielmanager {
     }
 
     public static void wuerfelCallback() {
-        
+        spieler[aktuellerSpieler].wuerfeln();
+        gui.refresh();
     }
 
     public static void rundeAbschliessen() {
         //nächster Spieler
+        if(aktuellerSpieler == 0) {
+            
+        }
     }
 
+    public static int getPunkte1() {
+        return spieler[0].punkteStandAnzeigen();
+    }
+
+    public static int getPunkte2() {
+        return spieler[1].punkteStandAnzeigen();
+    }
 }
