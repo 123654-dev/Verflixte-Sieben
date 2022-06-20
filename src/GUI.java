@@ -183,8 +183,7 @@ public class GUI implements ActionListener {
 
         } else if (a.getSource() == this.fertig) {
             if (value1 <= 0 || value1 > Spielmanager.getEinstellungen().getStartguthaben()) {
-                Spielmanager.gui.showAlert("Ungültiger Einsatz. Bitte geben Sie einen gültigen Einsatz zwischen 0 und "
-                        + Spielmanager.getEinstellungen().getStartguthaben() + " ein.");
+                Spielmanager.gui.showAlert("Ungültiger Einsatz. Bitte geben Sie einen gültigen Einsatz zwischen 0 und " + Spielmanager.getEinstellungen() + " ein.");
                 return;
             }
             einsatz1.setText(("ERROR"));
