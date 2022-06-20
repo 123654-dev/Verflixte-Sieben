@@ -1,8 +1,3 @@
-package src;
-
- 
-
-
 /**
  * Beschreiben Sie hier die Klasse Spieler.
  * 
@@ -16,8 +11,9 @@ public class Spieler
 
     /**
      * Konstruktor für Objekte der Klasse Spieler
+     * @param i
      */
-    public Spieler()
+    public Spieler(int i)
     {
         // Instanzvariable initialisieren
         x = 0;
