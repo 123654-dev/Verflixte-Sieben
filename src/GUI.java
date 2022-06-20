@@ -25,13 +25,11 @@ public class GUI implements ActionListener {
     private GridBagConstraints c = new GridBagConstraints();
 
     private JSpinner spinner1 = new JSpinner();
-    private JSpinner spinner2 = new JSpinner();
 
     private JTextField namenEingabe1 = new JTextField(8);
     private JTextField namenEingabe2 = new JTextField(8);
 
     private JLabel einsatz1 = new JLabel("0");
-    private JLabel einsatz2 = new JLabel("0");
     private JLabel punkteAnzahl1 = new JLabel("0");
     private JLabel punkteAnzahl2 = new JLabel("0");
     private JLabel bild = new JLabel("nichts");
@@ -102,10 +100,8 @@ public class GUI implements ActionListener {
         panel3.add(namenEingabe2, c);
         c.gridx = 0;
         c.gridy = 1;
-        panel3.add(einsatz2, c);
         c.gridx = 1;
         c.gridy = 1;
-        panel3.add(spinner2, c);
         c.gridx = 1;
         c.gridy = 2;
         panel3.add(punkteAnzahl2, c);
@@ -133,8 +129,6 @@ public class GUI implements ActionListener {
         punkteAnzahl2.setForeground(Color.white);
         einsatz1.setFont(fontABC);
         einsatz1.setForeground(Color.white);
-        einsatz2.setFont(fontABC);
-        einsatz2.setForeground(Color.white);
         start.setFont(fontABC);
         start.setForeground(Color.white);
         start.setBackground(new Color(105, 105, 105));
@@ -176,35 +170,36 @@ public class GUI implements ActionListener {
         } catch (java.text.ParseException e) {
         }
         int value1 = (Integer) spinner1.getValue();
-        try {
-            spinner2.commitEdit();
-        } catch (java.text.ParseException e) {
-        }
-        int value2 = (Integer) spinner2.getValue();
 
         name1.setText(("" + erstePerson));
         name2.setText(("" + zweitePerson));
 
         if (a.getSource() == this.start) {
-            if (value1 <= 0 || value2 <= 0) {
+            if (value1 <= 0) {
                 einsatz1.setText(("ERROR"));
-                einsatz2.setText(("ERROR"));
             } else {
                 // Spielmanager.wuerfel();
             }
 
         } else if (a.getSource() == this.fertig) {
+            if (value1 <= 0 || value1 > Spielmanager.getEinstellungen().getStartguthaben()) {
+                Spielmanager.gui.showAlert("Ungültiger Einsatz. Bitte geben Sie einen gültigen Einsatz zwischen 0 und "
+                        + Spielmanager.getEinstellungen().getStartguthaben() + " ein.");
+                return;
+            }
+            einsatz1.setText(("ERROR"));
+            Spielmanager.setNamen(erstePerson, zweitePerson);
             name1.setText(("" + erstePerson));
             name2.setText(("" + zweitePerson));
 
+            Spielmanager.einsatzCallback(value1);
             einsatz1.setText(("" + value1));
-            einsatz2.setText(("" + value2));
 
         } else if (a.getSource() == this.stop) {
             Spielmanager.rundeAbschliessen();
         }
     }
-    
+
     public void showAlert(String text) {
         JOptionPane.showMessageDialog(frame, text);
     }

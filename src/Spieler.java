@@ -46,8 +46,8 @@ public class Spieler {
         int ergebnis = wuerfel1.randomZahlAusgeben() + wuerfel2.randomZahlAusgeben();
         if (ergebnis == 7) {
             punkte -= 7;
-            Spielmanager.gui.showAlert("Du hast einen 7 geworfen und verloren!");
-            Spielmanager.rundeAbschliessen();
+            Spielmanager.gui.showAlert("Du hast eine 7 geworfen und verloren!");
+            Spielmanager.ohohSiebenGewuerfelt(this);
         } else {
             punkte += ergebnis;
         }
@@ -84,4 +84,23 @@ public class Spieler {
         return punkte;
     }
 
+    public void punktestandRuinieren() {
+        this.punkte = -5000;
+    }
+
+    /**
+     * Getter für das Attribut name
+     * @return name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Setter für das Attribut name
+     * @param name der Name des Spielers
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 }

@@ -4,31 +4,35 @@ class Spielmanager {
     static Spieler[] spieler;
     static GUI gui;
     static int aktuellerSpieler;
+    static Topf topf;
+    static Spieleinstellungen einstellungen;
 
     public static void main(String[] args) {
-        Spieleinstellungen einstellungen;        
         einstellungen = Spieleinstellungen.standardWerte();
-        
-        //Spieler-Array initialisieren
+
+        // Spieler-Array initialisieren
         spieler = new Spieler[2];
 
-        //Alle Spieler, die "benötigt" werden, als Objekte erzeugen und das Array damit füllen
+        topf = new Topf();
+
+        // Alle Spieler, die "benötigt" werden, als Objekte erzeugen und das Array damit
+        // füllen
         for (int i = 0; i < spieler.length; i++) {
-            spieler[i] = new Spieler(new Wuerfel(), new Wuerfel(), new Topf(), einstellungen.getStartguthaben());
+            spieler[i] = new Spieler(new Wuerfel(), new Wuerfel(), topf, einstellungen.getStartguthaben());
         }
 
-        //Neue GUI-Instanz erzeugen, die später verwendet wird
+        // Neue GUI-Instanz erzeugen, die später verwendet wird
         gui = new GUI();
         initGame();
     }
 
     static void initGame() {
-        //erster Spieler ist dran
+        // erster Spieler ist dran
         aktuellerSpieler = 0;
     }
 
-    public static void einsatzCallback() {
-        //jetzt: Würfeln
+    public static void einsatzCallback(int value) {
+        spieler[aktuellerSpieler].einsatzSetzen(value);
     }
 
     public static void wuerfelCallback() {
@@ -36,10 +40,25 @@ class Spielmanager {
         gui.refresh();
     }
 
+    public static void setNamen(String pName1, String pName2) {
+        spieler[0].setName(pName1);
+        spieler[1].setName(pName2);
+    }
+
     public static void rundeAbschliessen() {
-        //nächster Spieler
-        if(aktuellerSpieler == 0) {
-            
+        // nächster Spieler
+        if (aktuellerSpieler == 0) {
+            aktuellerSpieler = 1;
+        } else {
+            if (getPunkte1() > getPunkte2()) {
+                Spielmanager.gui.showAlert(
+                        spieler[0].getName() + " hat " + topf.getEinsatz() + " VerflixteSiebenBux gewonnen!");
+            } else if (getPunkte1() < getPunkte2()) {
+                Spielmanager.gui.showAlert(
+                        spieler[1].getName() + " hat " + topf.getEinsatz() + " VerflixteSiebenBux gewonnen!");
+            } else {
+                Spielmanager.gui.showAlert("Unentschieden!");
+            }
         }
     }
 
@@ -49,5 +68,14 @@ class Spielmanager {
 
     public static int getPunkte2() {
         return spieler[1].punkteStandAnzeigen();
+    }
+
+    public static void ohohSiebenGewuerfelt(Spieler pSpieler) {
+        pSpieler.punktestandRuinieren();
+        rundeAbschliessen();
+    }
+
+    public static Spieleinstellungen getEinstellungen() {
+        return einstellungen;
     }
 }
